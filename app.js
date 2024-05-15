@@ -47,8 +47,8 @@ app.post('/checkout', async (req,res)=>{
         phone_number_collection:{ 
             'enabled': true,     
         },  
-        success_url:`${process.env.BASE_URL}/complete`,
-        cancel_url:`${process.env.BASE_URL}/cancel`
+        // success_url:`${process.env.BASE_URL}/complete`,
+        // cancel_url:`${process.env.BASE_URL}/cancel`
     })
     // res.redirect(session.url)
     res.json({
@@ -105,4 +105,7 @@ app.post('/send',(req,res)=>{
     })
 })
 
-app.listen(3000, console.log('écoute sur le port 3000'))
+// app.listen(3000, console.log('écoute sur le port 3000'))
+
+
+module.exports = app;
