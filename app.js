@@ -9,7 +9,7 @@ const exp = require('constants')
 require("dotenv").config();
 const stripe = require('stripe')(process.env.NEXT_PUBLIC_SECRET_KEY)
 
-const app = express()
+var app = express()
 var server = http.Server(app)
 var port = 3000
 app.set('port', port)
@@ -105,7 +105,7 @@ app.post('/send',(req,res)=>{
     })
 })
 
-// app.listen(3000, console.log('écoute sur le port 3000'))
+app.listen(3000, console.log('écoute sur le port 3000'))
 
 
 module.exports = app;
