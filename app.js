@@ -47,8 +47,8 @@ app.post('/checkout', async (req,res)=>{
         phone_number_collection:{ 
             'enabled': true,     
         },  
-        // success_url:`${process.env.BASE_URL}/complete`,
-        // cancel_url:`${process.env.BASE_URL}/cancel`
+        success_url:`https://dream2car-backend.vercel.app/complete`,
+        cancel_url:`https://dream2car-backend.vercel.app/cancel`
     })
     // res.redirect(session.url)
     res.json({
